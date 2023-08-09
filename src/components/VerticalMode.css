@@ -1,0 +1,48 @@
+/* VerticalMode.css */
+
+@keyframes intervalAnimationFadeIn {
+  0% {
+    transform: translateX(0);
+    opacity: 0;
+  }
+  25% {
+    transform: translateY(-25%);
+    opacity: 1;
+  }
+  50% {
+    transform: translateX(30%);
+    opacity: 1;
+  }
+}
+
+@keyframes intervalAnimationFadeOn {
+  0% {
+    transform: translateX(0);
+    opacity: 0;
+  }
+  25% {
+    transform: translateY(-25%);
+    opacity: 1;
+  }
+  50% {
+    transform: translateX(-30%);
+    opacity: 1;
+  }
+}
+
+/* VerticalMode.css */
+
+.fade-in {
+  animation: intervalAnimationFadeIn 4s ease-in-out infinite 20s; /* Added 20s delay */
+}
+
+.fade-on {
+  animation: intervalAnimationFadeOn 4s ease-in-out infinite 20s; /* Added 20s delay */
+}
+
+
+@media (max-width: 768px) {
+  .hide-on-mobile {
+    display: none;
+  }
+}

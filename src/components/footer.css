@@ -1,0 +1,14 @@
+.x-class{
+  color: black;
+  text-decoration: none;
+}
+
+
+.x-class:hover {
+    color: #3aba04; /* Change to the desired hover color */
+  }
+
+  .address {
+    display: flex;
+    align-items: center; /* Align items vertically within the flex container */
+  }

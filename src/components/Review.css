@@ -1,0 +1,140 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap");
+
+body {
+  text-align: center;
+  margin: 0 auto;
+  font-family: "Poppins", sans-serif;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+@media screen and (max-width: 1200px) {
+  .leftCard,
+  .rightCard {
+    display: none;
+  }
+}
+
+.carousel-container {
+  display: flex;
+  flex-flow: column;
+  padding-top: 200px;
+  background-color: black;
+}
+
+.avatars {
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+  margin-top: -6em;
+}
+
+.cards {
+  display: flex;
+  width: 100%;
+}
+
+.card {
+  margin: 5em 2em 0em;
+  background-color: #fbfbfa;
+  padding: 2em;
+  width: 35%;
+  height: 170px;
+  flex: 1;
+  box-shadow: 6px 6px 17px 1px rgba(0, 0, 0, 0.36);
+}
+
+.leftCard {
+  margin-right: -15em;
+  margin-top: 7em;
+}
+
+.rightCard {
+  margin-left: -15em;
+  margin-top: 7em;
+}
+
+.active {
+  z-index: 1;
+  height: 350px;
+  /* background-image: url("./assests/quote-left.svg"), url("./assests/quote-right.svg"); */
+  background-repeat: no-repeat;
+  background-position: left top, right bottom;
+  background-size: 40px;
+  background-origin: content-box;
+}
+
+.arrow-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: -7em;
+  position: relative;
+} 
+
+.arrow {
+  height: 3em;
+}
+
+.arrow:active {
+  fill: #1c6a01;
+}
+
+
+.arrow {
+  height: 3em;
+}
+
+.arrow:active {
+  fill: #1c6a01;
+}
+
+.name {
+  margin-top: 0.5em;
+  margin-bottom: -0.2em;
+}
+
+p {
+  padding: 0em 3em;
+}
+
+.text {
+  height: 90%;
+    /* overflow: hidden;   */
+}
+
+.tracker {
+  display: flex;
+  justify-content: center;
+  height: 2.5em;
+  margin-top: 1em;
+}
+
+.circle {
+  transform: scale(0.2);
+}
+
+.viewAll {
+  background-color: white;
+  border: none;
+  border-radius: 25px;
+  height: 2em;
+  width: 20%;
+  font-weight: bold;
+  margin: 2em auto;
+  box-shadow: 0px 3px 7px 1px rgba(0, 0, 0, 0.36);
+  -webkit-box-shadow: 0px 3px 7px 1px rgba(0, 0, 0, 0.36);
+}
+
+.viewAll:hover {
+  background-color: lightgray;
+}
+
+.viewAll:active {
+  background-color: grey;
+}
+
+@media screen and (max-width: 780px){
+  .fan {
+    padding-bottom: 40px;
+    padding-top: 40px;
+  }
+}

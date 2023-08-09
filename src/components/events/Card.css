@@ -1,0 +1,14 @@
+/* styles.css */
+.button-hover {
+    width: 50%;
+    margin: auto;
+    background-color: #000;
+    color: #fff;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .button-hover:hover {
+    background-color:#1c6a01;
+    color: #ffffff;
+  }
+  

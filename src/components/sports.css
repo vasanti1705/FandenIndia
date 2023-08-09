@@ -1,0 +1,148 @@
+body {
+    background-color: black;
+}
+
+.container-sports1 {
+    margin-top: 200px;
+  
+    justify-content: center;
+    justify-content: space-between;
+    color: #fcfcfc;
+
+    margin-top: 60px;
+  
+  flex:1;
+  align-items: center;
+  }
+
+  .container-sports2 {
+    margin-top: 200px;
+    
+    
+    
+    color: #fcfcfc;
+flex:2;
+    margin-top: 60px;
+  flex-direction: row;
+  
+  
+  }
+
+  .container-sports{
+    display: flex;
+    
+  }
+
+  .center-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .left-side {
+    margin-top: 5px;
+    width: 30%;
+    color: #f2f2f2;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    padding-top: 50px;
+  }
+
+  .btns {
+   width: 250px;
+    padding: 5px;
+    display: flex;
+    align-items: flex-start;  
+    
+  }
+
+  .right-side h2 {
+    padding-top: 70px;
+    color: #1c6101;
+  }
+
+  .btn-sports {
+    
+    color: #fcfcfc;
+    background-color: #1c6101;
+    padding: 15px;
+    width: 100%;
+    height: 100px;
+    border-radius: 5px;
+    font-weight: 800;
+    margin-bottom: 10px;
+    
+  }
+
+  .btns :hover {
+    background-color: #0e2f01;
+    
+  }
+
+  
+  .right-side {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+   
+  }
+  
+
+  .news1, .news2 {
+    padding: 10px;
+    padding-top: 50px;
+    
+  }
+
+  .news1 p, .news2 p {
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 1000px;
+  }
+
+  .news1 img , .news2 img{
+    height: 255px;
+    border-radius: 5px;
+    margin: auto;
+  }
+
+  
+
+  
+  @media screen and (max-width: 786px) {
+    
+    .container-sports {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .news1 {
+        padding: 1px;
+        padding-top: 100px;
+      }
+
+      .news1 img, .news2 img {
+        padding-bottom: 10px;
+      }
+
+      .btn-sports {
+        color: #fcfcfc;
+        background-color: #1c6101;
+        padding: 15px;
+        width: 155px;
+        height: 80px;
+        border-radius: 5px;
+        font-weight: 800;
+        
+      }
+
+
+  }
+  
