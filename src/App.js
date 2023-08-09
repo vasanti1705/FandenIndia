@@ -1,4 +1,4 @@
-import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import 'mdb-react-ui-kit/dist/css/mdb.min.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -26,14 +26,14 @@ import CartPage from "./components/Store/CartPage";
 function App() {
   return (
     <>
-    <BrowserRouter>
-    <Nav />
-      <Routes>
+      <BrowserRouter>
+        <Nav />
+        <Routes>
           <Route exact path='/' element={[
             <>
-            
-               
-               <div style={{ marginTop:'80px', marginBottom: '50px' }}>
+
+
+              <div style={{ marginTop: '80px', marginBottom: '50px' }}>
                 <VerticalMode />
               </div>
 
@@ -44,31 +44,31 @@ function App() {
                 <PreviousNextMethods />
               </div>
               <div style={{ marginTop: '20px', marginBottom: '20px' }}>
-              <Pages />
+                <Pages />
               </div>
               <div style={{ marginTop: '0px', marginBottom: '0px' }}>
-              <News />
+                <News />
               </div>
               <div style={{ marginTop: '', marginBottom: '50px' }}>
                 <Review />
               </div>
-              
-            </>         
+
+            </>
           ]} />
 
-            
-         <Route exact path='/Main' element={<Main />}  />
-        <Route path="/cart" component={<CartPage />} />
-       <Route exact path = '/sports' element={<Sports />} />
-        <Route exact path='/events' element={<PastEventPage />} />
-        <Route exact path='/aboutus' element={<Aboutus />} />
-        <Route exact path='/login' element={<Login />} />
-        <Route exact path='/signup' element={<Signup />} />
-      
-      </Routes>
-      <Footer /> 
-    </BrowserRouter>
- 
+
+          <Route exact path='/Main' element={<Main />} />
+          <Route path="/cart" element={<CartPage />} />
+          <Route exact path='/sports' element={<Sports />} />
+          <Route exact path='/events' element={<PastEventPage />} />
+          <Route exact path='/aboutus' element={<Aboutus />} />
+          <Route exact path='/login' element={<Login />} />
+          <Route exact path='/signup' element={<Signup />} />
+
+        </Routes>
+        <Footer />
+      </BrowserRouter>
+
 
     </>
 

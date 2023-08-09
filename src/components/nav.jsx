@@ -1,12 +1,12 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import './navbar.css';
 import fan from './assests/logo2.png';
 import { Link } from 'react-router-dom';
-import Main from './Store/Main'
-import CartPage from './Store/CartPage';
 import { useNavigate,NavLink } from 'react-router-dom';
+import { CartContext } from '../context/cart';
 
-const Nav = ({ cartItems }) => {
+const Nav = () => {
+  const { cartItems} = useContext(CartContext)
   const [clicked, setClicked] = useState(false);
 
   const handleClick = () => {
@@ -14,20 +14,10 @@ const Nav = ({ cartItems }) => {
   };
 
 
-  const getTotalItem = () => {
-    if (!Array.isArray(cartItems)) return 0;
-
-    let totalItems = 0;
-    for (const item of cartItems) {
-      totalItems += item.quantity;
-    }
-    return totalItems;
-  };
-
   const navigate = useNavigate();
 
   const redirectToCart = () => {
-    navigate('/CartPage');
+    navigate('/cart');
   };
 
   return (
@@ -71,7 +61,7 @@ const Nav = ({ cartItems }) => {
 
            <li>
           <button className="btn" onClick={redirectToCart}>
-          <h2><i class="fa-solid fa-cart-shopping"></i> {getTotalItem()}</h2>
+          <h2><i class="fa-solid fa-cart-shopping"></i> {cartItems.length}</h2>
           </button>
           </li>
           
