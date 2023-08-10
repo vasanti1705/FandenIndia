@@ -21,52 +21,62 @@ import Sports from './components/sports';
 import Pages from "./components/Store/Pages";
 import Main from "./components/Store/Main";
 import CartPage from "./components/Store/CartPage";
+import StartupLogin from "./components/StartupLogin";
+import { useState } from "react";
 
 
 function App() {
+  const [logged, setLogged] = useState(false);
   return (
     <>
       <BrowserRouter>
-        <Nav />
-        <Routes>
-          <Route exact path='/' element={[
-            <>
+        {!logged ? <StartupLogin setLogged={setLogged} /> :
+
+          <>
+            <Nav />
+            <Routes>
+              <Route exact path='/' element={[
+                <>
 
 
-              <div style={{ marginTop: '80px', marginBottom: '50px' }}>
-                <VerticalMode />
-              </div>
+                  <div style={{ marginTop: '80px', marginBottom: '50px' }}>
+                    <VerticalMode />
+                  </div>
 
-              <div style={{ marginTop: '0px', marginBottom: '0px' }}>
-                <Event />
-              </div>
-              <div style={{ marginTop: '0px', marginBottom: '0px' }}>
-                <PreviousNextMethods />
-              </div>
-              <div style={{ marginTop: '20px', marginBottom: '20px' }}>
-                <Pages />
-              </div>
-              <div style={{ marginTop: '0px', marginBottom: '0px' }}>
-                <News />
-              </div>
-              <div style={{ marginTop: '', marginBottom: '50px' }}>
-                <Review />
-              </div>
+                  <div style={{ marginTop: '0px', marginBottom: '0px' }}>
+                    <Event />
+                  </div>
+                  <div style={{ marginTop: '0px', marginBottom: '0px' }}>
+                    <PreviousNextMethods />
+                  </div>
+                  <div style={{ marginTop: '20px', marginBottom: '20px' }}>
+                    <Pages />
+                  </div>
+                  <div style={{ marginTop: '0px', marginBottom: '0px' }}>
+                    <News />
+                  </div>
+                  <div style={{ marginTop: '', marginBottom: '50px' }}>
+                    <Review />
+                  </div>
 
-            </>
-          ]} />
+                </>
+              ]} />
 
 
-          <Route exact path='/Main' element={<Main />} />
-          <Route path="/cart" element={<CartPage />} />
-          <Route exact path='/sports' element={<Sports />} />
-          <Route exact path='/events' element={<PastEventPage />} />
-          <Route exact path='/aboutus' element={<Aboutus />} />
-          <Route exact path='/login' element={<Login />} />
-          <Route exact path='/signup' element={<Signup />} />
+              <Route exact path='/Main' element={<Main />} />
+              <Route path="/cart" element={<CartPage />} />
+              <Route exact path='/sports' element={<Sports />} />
+              <Route exact path='/events' element={<PastEventPage />} />
+              <Route exact path='/aboutus' element={<Aboutus />} />
+              <Route exact path='/login' element={<Login />} />
+              <Route exact path='/signup' element={<Signup />} />
 
-        </Routes>
-        <Footer />
+            </Routes>
+            <Footer />
+          </>
+        }
+
+
       </BrowserRouter>
 
 
